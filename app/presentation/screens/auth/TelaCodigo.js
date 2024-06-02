@@ -22,11 +22,11 @@ export default function TelaCodigo() {
 
             <Text style={styles.mainText}>INSIRA O CÓDIGO </Text>
 
-            <Text style={styles.infoText}>Insira o códiogo{'\n'}recebido no e-mail...</Text>
+            <Text style={styles.infoText}>Insira o código{'\n'}recebido no e-mail...</Text>
 
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
                 <TextInput 
-                    placeholder="CÓDIGO RECEBIDO" 
+                    placeholder="Código Recebido" 
                     placeholderTextColor={CORES.branco}
                     style={styles.input}
                     keyboardType="email-address"

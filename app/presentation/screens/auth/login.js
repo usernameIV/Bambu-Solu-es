@@ -31,7 +31,7 @@ export default function Login() {
                     secureTextEntry
                 />
 
-                <Link href={'./DadosMobilia'} asChild>
+                <Link href={'../projects/projetosHome'} asChild>
                     <TouchableOpacity style={styles.button} activeOpacity={0.8}> 
                         <Text style={styles.buttonText}>Login</Text>
                     </TouchableOpacity> 

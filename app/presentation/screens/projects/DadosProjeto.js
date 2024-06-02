@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { View,Text,StyleSheet,TextInput} from "react-native";
+import { View, Text, StyleSheet, TextInput } from "react-native";
 import { Stack } from "expo-router";
 import CORES from "../../../constants/cores";
 import { DataContext } from "../context/DataContext";
@@ -67,8 +67,7 @@ export default function DadosProjeto() {
         }
       />
 
-        <ButtonLink href='../DadosCliente' text='Salvar e continuar' />
-
+      <ButtonLink href="./DadosAmbiente" text="Salvar e continuar" />
     </View>
   );
 }

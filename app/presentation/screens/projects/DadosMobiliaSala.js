@@ -117,7 +117,7 @@ const GreenCardScreen = () => {
         {roomItems.map((item, index) => renderRoomItem(item, index))}
       </View>
 
-      <Link style={styles.buttonText} href='./context/ConfirmarDados' asChild>
+      <Link style={styles.buttonText} href='../context/ConfirmarDados' asChild>
       <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}> Salvar e continuar </Text>
         </TouchableOpacity>

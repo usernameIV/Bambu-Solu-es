@@ -1,20 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 import CORES from "./cores";
 import { Bar } from "react-native-progress";
+import { GlobalDataContext } from "../presentation/screens/context/GlobalDataContext";
 
-const ProjectCard = ({ title, startDate, endDate, progress, pagina }) => {
+const ProjectCard = ({ projetoId, pagina }) => {
+  const { projetos } = useContext(GlobalDataContext);
+  const projeto = projetos.find((p) => p.id === projetoId);
+
+  if (!projeto) {
+    return <Text>Projeto não encontrado</Text>;
+  }
+
+  const { cliente, projeto: projetoInfo, caracteristicas } = projeto;
+
   return (
-    <Link style={styles.card} href={pagina} asChild>
+    <Link style={styles.card} href={`/projeto/${projetoId}`} asChild>
       <View>
-        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.title}>{projetoInfo.titulo}</Text>
         <View style={styles.progressContainer}>
           <Text style={styles.phaseText}>Fase inicial</Text>
-          <Text style={styles.progressText}>{progress}%</Text>
+          <Text style={styles.progressText}>0%</Text>
         </View>
         <Bar
-          progress={progress / 100}
+          progress={0 / 100}
           width={null}
           color="#D16A47"
           unfilledColor="#CC8879"
@@ -22,8 +32,8 @@ const ProjectCard = ({ title, startDate, endDate, progress, pagina }) => {
           height={20}
           style={styles.progressBar}
         />
-        <Text style={styles.dateText}>Início: {startDate}</Text>
-        <Text style={styles.dateText}>Previsão de entrega: {endDate}</Text>
+        <Text style={styles.dateText}>Início: {new Date().toLocaleDateString()}</Text>
+        <Text style={styles.dateText}>Previsão de entrega: {new Date().toLocaleDateString()}</Text>
       </View>
     </Link>
   );

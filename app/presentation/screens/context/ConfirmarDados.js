@@ -6,15 +6,17 @@ import {
   TouchableOpacity,
   TextInput,
   ScrollView,
+  Alert,
 } from "react-native";
-import { Link, Stack, router } from "expo-router";
+import { Stack, router } from "expo-router";
 import CORES from "../../../constants/cores";
 import { DataContext } from "./DataContext";
 import { GlobalDataContext } from "./GlobalDataContext";
 
 const FormConclusao = () => {
-  const { clienteData, projetoData, setProjetoData, checkboxes } = useContext(DataContext); 
-  const { projetos, setProjetos } = useContext(GlobalDataContext);
+  const { clienteData, projetoData, setProjetoData, checkboxes } =
+    useContext(DataContext);
+  const { projetos, setProjetos, projetoIdCounter, setProjetoIdCounter } = useContext(GlobalDataContext);
   const [detalhesFinais, setDetalhesFinais] = useState("");
 
   const handleFinalDetailsChange = (text) => {
@@ -23,17 +25,19 @@ const FormConclusao = () => {
 
   const saveFinalDetails = () => {
     const novoProjeto = {
+      id: projetoIdCounter + 1,
       cliente: clienteData,
       projeto: projetoData,
       caracteristicas: checkboxes,
       detalhesFinais: detalhesFinais,
     };
 
-    setProjetos([...projetos, novoProjeto ]);
+    setProjetos([...projetos, novoProjeto]);
+    setProjetoIdCounter(projetoIdCounter + 1);
 
     Alert.alert("Sucesso", "Dados do projeto salvos com sucesso!");
 
-    router.navigate('/app/projects/projetosHome')
+    router.navigate("../projetosHome");
   };
 
   return (
@@ -58,9 +62,9 @@ const FormConclusao = () => {
       <Text style={styles.label}>Tipo de Construção:</Text>
       <Text style={styles.value}>{projetoData.tipoConstrucao}</Text>
       <Text style={styles.label}>Tamanho da Construção:</Text>
-      <Text style={styles.value}>{projetoData.tamanhoConstrucao}</Text>
+      <Text style={styles.value}>{projetoData.tamanhoConstrucao}m²</Text>
       <Text style={styles.label}>Orçamento Inicial:</Text>
-      <Text style={styles.value}>{projetoData.orcamento}</Text>
+      <Text style={styles.value}>{projetoData.orcamento}R$</Text>
 
       <Text style={styles.subheading}>Características:</Text>
 
@@ -101,9 +105,9 @@ const FormConclusao = () => {
         onChangeText={handleFinalDetailsChange}
         multiline
       />
-        <TouchableOpacity style={styles.button} onPress={saveFinalDetails}>
-          <Text style={styles.buttonText}>Finalizar</Text>
-        </TouchableOpacity>
+      <TouchableOpacity style={styles.button} onPress={saveFinalDetails}>
+        <Text style={styles.buttonText}>Finalizar</Text>
+      </TouchableOpacity>
     </ScrollView>
   );
 };

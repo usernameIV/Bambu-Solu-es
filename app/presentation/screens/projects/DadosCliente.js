@@ -57,6 +57,7 @@ export default function DadosCliente() {
         value={clienteData.telefone}
         onChangeText={validateTelefone}
         maxLength={11}
+        keyboardType='phone-pad'
       />
       {!telefoneValido && (
         <Text style={styles.errorText}>Formato de telefone inválido. Use (XX) 9XXXX-XXXX.</Text>
@@ -69,6 +70,7 @@ export default function DadosCliente() {
         style={styles.input}
         value={clienteData.email}
         onChangeText={(text) => setClienteData({ ...clienteData, email: text })}
+        keyboardType='email-address'
       />
 
       <Link style={styles.button} href='./DadosProjeto' asChild>
