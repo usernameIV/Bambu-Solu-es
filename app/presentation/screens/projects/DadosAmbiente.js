@@ -1,12 +1,14 @@
 import React, { useContext } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { Link, Stack } from "expo-router";
+import { Stack } from "expo-router";
 import CORES from "../../../constants/cores";
 import Checkbox from "expo-checkbox";
+import ButtonLink from "../../components/button/ButtonLink";
 
 export default function AdvancedInfo() {
 
   return (
+
     <View style={styles.container}>
       <Stack.Screen options={{ title: "Dados do Ambiente" }} />
       <View>
@@ -17,25 +19,18 @@ export default function AdvancedInfo() {
           <Text style={styles.texto}>Contém restrições?</Text>
           <Checkbox
             style={styles.checkbox}
-
-
           />
         </View>
         <View style={styles.row}>
           <Text style={styles.texto}>Sustentabilidade?</Text>
           <Checkbox
             style={styles.checkbox}
-
-
           />
         </View>
         <View style={styles.row}>
           <Text style={styles.texto}>Acessibilidade?</Text>
           <Checkbox
             style={styles.checkbox}
-
-
-
           />
         </View>
       </View>
@@ -47,53 +42,35 @@ export default function AdvancedInfo() {
           <Text style={styles.texto}>Ventilação natural?</Text>
           <Checkbox
             style={styles.checkbox}
-
-
-
           />
         </View>
         <View style={styles.row}>
           <Text style={styles.texto}>Isolamento acústico?</Text>
           <Checkbox
             style={styles.checkbox}
-
-
-
           />
         </View>
         <View style={styles.row}>
           <Text style={styles.texto}>Eficiência energética?</Text>
           <Checkbox
             style={styles.checkbox}
-
-
-            
           />
         </View>
         <View style={styles.row}>
           <Text style={styles.texto}>Iluminação natural?</Text>
           <Checkbox
-            style={styles.checkbox}
-            
+            style={styles.checkbox} 
           />
         </View>
         <View style={styles.row}>
           <Text style={styles.texto}>Ventilação?</Text>
           <Checkbox
             style={styles.checkbox}
-            
           />
         </View>
       </View>
-      <Link href="./DadosMobilia" asChild>
-        <TouchableOpacity
-          style={styles.button}
-          activeOpacity={0.8}
-        >
-          
-          <Text style={styles.buttonText}>Salvar e continuar</Text>
-        </TouchableOpacity>
-      </Link>
+
+      <ButtonLink href="./DadosMobilia" text={"Salvar e continuar"} />
     </View>
   );
 }
@@ -130,20 +107,5 @@ const styles = StyleSheet.create({
     color: CORES.branco,
     fontSize: 20,
     textAlign: "center",
-  }, 
-  button: {
-    backgroundColor: CORES.secundaria,
-    width: '90%',
-    borderRadius: 10,
-    height: 50,
-    margin: 'auto',
-    marginTop: '10%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    elevation: 6,
-  },
-  buttonText: {
-    color: CORES.branco,
-    fontWeight: 'bold',
   },
 });
