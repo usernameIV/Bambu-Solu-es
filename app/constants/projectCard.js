@@ -3,20 +3,11 @@ import { View, Text, StyleSheet } from "react-native";
 import { Link } from "expo-router";
 import CORES from "./cores";
 import { Bar } from "react-native-progress";
-import { GlobalDataContext } from "../presentation/screens/context/GlobalDataContext";
 
-const ProjectCard = ({ projetoId, pagina }) => {
-  const { projetos } = useContext(GlobalDataContext);
-  const projeto = projetos.find((p) => p.id === projetoId);
-
-  if (!projeto) {
-    return <Text>Projeto não encontrado</Text>;
-  }
-
-  const { cliente, projeto: projetoInfo, caracteristicas } = projeto;
+const ProjectCard = () => {
 
   return (
-    <Link style={styles.card} href={`/projeto/${projetoId}`} asChild>
+    <Link style={styles.card}>
       <View>
         <Text style={styles.title}>{projetoInfo.titulo}</Text>
         <View style={styles.progressContainer}>

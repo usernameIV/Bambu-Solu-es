@@ -96,7 +96,6 @@ const styles = StyleSheet.create({
   secondary: {
     color: CORES.branco,
     fontSize: 24,
-
   },
   primaryTopic: {
     color: CORES.branco,

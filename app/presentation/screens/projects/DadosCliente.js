@@ -1,32 +1,11 @@
-import React, {useContext, useState} from 'react';
+import React from 'react';
 import {View, Text, Image, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
 import { Link, Stack } from 'expo-router';
 import CORES from '../../../constants/cores' ;
-import { DataContext } from '../context/DataContext';
+
 
 export default function DadosCliente() {
-  const { clienteData, setClienteData } = useContext(DataContext);
-  const [telefoneValido, setTelefoneValido] = useState(true);
-
-  const validateTelefone = (text) => {
-    const reg = /^\(\d{2}\) \d{5}-\d{4}$/;
-    if (reg.test(text) === false) {
-      setTelefoneValido(false);
-    } else {
-      setTelefoneValido(true);
-    }
-    setClienteData({ ...clienteData, telefone: text });
-  };
-
-  const saveState = () => {
-    if (telefoneValido) {
-      setClienteData({
-        ...clienteData,
-      });
-    } else {
-      alert('Por favor, insira um número de telefone válido.');
-    }
-  };
+ 
   return (  
     <View style={styles.container}>
       <Stack.Screen options={{ title: "Dados do Cliente" }} />
@@ -36,8 +15,6 @@ export default function DadosCliente() {
         placeholder="Nome do cliente"
         placeholderTextColor={CORES.branco}
         style={styles.input}
-        value={clienteData.nome}
-        onChangeText={(text) => setClienteData({ ...clienteData, nome: text })}
       />
 
       <Text style={styles.text}>Endereço</Text>
@@ -45,31 +22,22 @@ export default function DadosCliente() {
         placeholder="Endereço do cliente"
         placeholderTextColor={CORES.branco}
         style={styles.input}
-        value={clienteData.endereco}
-        onChangeText={(text) => setClienteData({ ...clienteData, endereco: text })}
       />
       
       <Text style={styles.text}>Telefone</Text>
       <TextInput
         placeholder="Telefone do cliente"
         placeholderTextColor={CORES.branco}
-        style={[styles.input, !telefoneValido && styles.inputError]}
-        value={clienteData.telefone}
-        onChangeText={validateTelefone}
+        style={[styles.input]}
         maxLength={11}
         keyboardType='phone-pad'
       />
-      {!telefoneValido && (
-        <Text style={styles.errorText}>Formato de telefone inválido. Use (XX) 9XXXX-XXXX.</Text>
-      )}
  
       <Text style={styles.text}>Email</Text>
       <TextInput
         placeholder="Email do cliente"
         placeholderTextColor={CORES.branco}
         style={styles.input}
-        value={clienteData.email}
-        onChangeText={(text) => setClienteData({ ...clienteData, email: text })}
         keyboardType='email-address'
       />
 
@@ -77,7 +45,7 @@ export default function DadosCliente() {
           <TouchableOpacity 
           style={styles.button}
           activeOpacity={0.8}
-          onPress={saveState}>
+          >
               <Text style={styles.buttonText}> Salvar e continuar </Text>
           </TouchableOpacity>
       </Link>
@@ -141,11 +109,6 @@ text: {
 },
 inputError: {
   borderColor: 'red',
-},
-errorText: {
-  color: 'red',
-  marginBottom: 16,
+}
 
-  alignSelf: 'center',
-},
 });
