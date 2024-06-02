@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { Link, Stack } from "expo-router";
 import CORES from '../../../constants/cores' ;
+import ButtonLink from '../../components/button/ButtonLink';
 
 const roomItems = [
   'Itens Sala - Chão',
@@ -117,11 +118,7 @@ const GreenCardScreen = () => {
         {roomItems.map((item, index) => renderRoomItem(item, index))}
       </View>
 
-      <Link style={styles.buttonText} href='../context/ConfirmarDados' asChild>
-      <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}> Salvar e continuar </Text>
-        </TouchableOpacity>
-      </Link> 
+      <ButtonLink href={"./HomeComProjetos"} text={"Salvar e continuar"}/>
     </ScrollView>
   );
 };

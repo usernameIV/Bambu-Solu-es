@@ -2,64 +2,64 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import CORES from '../../../constants/cores';
 import { Link } from 'expo-router';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import StylesProjeto from "./ProjectsStyles/ProjetoStyle";
 
 const ProjetoDetalhesScreen = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.header}>Projeto Casa de Praia</Text>
+    <View style={StylesProjeto.container}>
+      <Text style={StylesProjeto.header}>Projeto Casa de Praia</Text>
       
-      <View style={styles.card}>
-        <View style={styles.primaryTopic}>
-          <Text style={styles.primary}>• Situação atual</Text>
-          <Text style={styles.subTopic}>Etapa anterior</Text>
-          <Text style={styles.description}>- Reunião de briefing</Text>
-          <Text style={styles.subTopic}>Etapa atual</Text>
-          <Text style={styles.description}>- Definição de RT</Text>
-          <Text style={styles.subTopic}>Próxima etapa</Text>
-          <Text style={styles.description}>- Reunião com M.O</Text>
+      <View style={StylesProjeto.card}>
+        <View style={StylesProjeto.primaryTopic}>
+          <Text style={StylesProjeto.primary}>• Situação atual</Text>
+          <Text style={StylesProjeto.subTopic}>Etapa anterior</Text>
+          <Text style={StylesProjeto.description}>- Reunião de briefing</Text>
+          <Text style={StylesProjeto.subTopic}>Etapa atual</Text>
+          <Text style={StylesProjeto.description}>- Definição de RT</Text>
+          <Text style={StylesProjeto.subTopic}>Próxima etapa</Text>
+          <Text style={StylesProjeto.description}>- Reunião com M.O</Text>
         </View>
         
-        <View style={styles.secondaryTopic}>
-          <Text style={styles.secondary}>• Sobre a obra</Text>
-          <Text style={styles.subTopic}>Endereço</Text>
-          <Text style={styles.description}>- Av. Estefânia Carneiro. 171 PE - Carpina - Centro</Text>
-          <Text style={styles.subTopic}>Tamanho</Text>
-          <Text style={styles.description}>- 90m²</Text>
-          <Text style={styles.subTopic}>Tipo de obra</Text>
-          <Text style={styles.description}>- Residencial</Text>
-          <Text style={styles.subTopic}>Orçamento atual</Text>
-          <Text style={styles.description}>- R$9.812,60</Text>
+        <View style={StylesProjeto.secondaryTopic}>
+          <Text style={StylesProjeto.secondary}>• Sobre a obra</Text>
+          <Text style={StylesProjeto.subTopic}>Endereço</Text>
+          <Text style={StylesProjeto.description}>- Av. Estefânia Carneiro. 171 PE - Carpina - Centro</Text>
+          <Text style={StylesProjeto.subTopic}>Tamanho</Text>
+          <Text style={StylesProjeto.description}>- 90m²</Text>
+          <Text style={StylesProjeto.subTopic}>Tipo de obra</Text>
+          <Text style={StylesProjeto.description}>- Residencial</Text>
+          <Text style={StylesProjeto.subTopic}>Orçamento atual</Text>
+          <Text style={StylesProjeto.description}>- R$9.812,60</Text>
         </View>
 
-        <View style={styles.innerButtonsContainer}>
-          <TouchableOpacity style={styles.innerButton}>
+        <View style={StylesProjeto.innerButtonsContainer}>
+          <TouchableOpacity style={StylesProjeto.innerButton}>
             <Link href='./CaracProjetos'>
-              <Text style={styles.innerButtonText}>Características do projeto</Text>
+              <Text style={StylesProjeto.innerButtonText}>Características do projeto</Text>
             </Link>
           </TouchableOpacity>
           
-          <TouchableOpacity style={styles.innerButton}>
-            <Text style={styles.innerButtonText}>Características do ambiente</Text>
+          <TouchableOpacity style={StylesProjeto.innerButton}>
+            <Text style={StylesProjeto.innerButtonText}>Características do ambiente</Text>
           </TouchableOpacity>
         </View>
         
-        <Text style={styles.status}>Status: em andamento...                   Progresso: 30% {'\n'} </Text> 
-        <Text style={styles.status}>Início: 20/06/2023              Previsão de entrega: 05/2024</Text>
+        <Text style={StylesProjeto.status}>Status: em andamento...                   Progresso: 30% {'\n'} </Text> 
+        <Text style={StylesProjeto.status}>Início: 20/06/2023              Previsão de entrega: 05/2024</Text>
       </View>
 
-      <View style={styles.outerButtonsContainer}>
-        <TouchableOpacity style={styles.createTaskButton}>
-          <Text style={styles.outerButtonText}>Criar nova task</Text>
+      <View style={StylesProjeto.outerButtonsContainer}>
+        <TouchableOpacity style={StylesProjeto.createTaskButton}>
+          <Text style={StylesProjeto.outerButtonText}>Criar nova task</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.deleteTaskButton}>
-          <Text style={styles.outerButtonText}>Deletar task</Text>
+        <TouchableOpacity style={StylesProjeto.deleteTaskButton}>
+          <Text style={StylesProjeto.outerButtonText}>Deletar task</Text>
         </TouchableOpacity>
       </View>
 
-      <View style={styles.addButtonContainer}>
-        <TouchableOpacity style={styles.addButton}>
-          <Text style={styles.addButtonText}>Adicionar documento</Text>
+      <View style={StylesProjeto.addButtonContainer}>
+        <TouchableOpacity style={StylesProjeto.addButton}>
+          <Text style={StylesProjeto.addButtonText}>Adicionar documento</Text>
         </TouchableOpacity>
       </View>
     </View>

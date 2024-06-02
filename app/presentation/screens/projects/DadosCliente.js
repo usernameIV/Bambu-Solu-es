@@ -2,9 +2,10 @@ import React from 'react';
 import {View } from 'react-native';
 import { Stack } from 'expo-router';
 import ButtonLink from '../../components/button/ButtonLink';
-import StylesClient from './ProjectsStyles.js/DadosClienteStyle';
+import StylesClient from './ProjectsStyles/DadosClienteStyle';
 import InputLink from '../../components/input/InputLink';
 import CORES from '../../../constants/cores';
+
 export default function DadosCliente() {
   return (
       <View style={StylesClient.container}>
