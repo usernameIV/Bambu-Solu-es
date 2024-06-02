@@ -3,7 +3,8 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-nativ
 import { Link } from 'expo-router';
 import CORES from '../../../constants/cores';
 import * as Animatable from 'react-native-animatable';
-
+import ButtonLink from '../../components/button/ButtonLink';
+import Button2Styles from '../../components/button/ButtonWhite';
 
 export default function Login() {
     return (
@@ -31,11 +32,9 @@ export default function Login() {
                     secureTextEntry
                 />
 
-                <Link href={'../projects/projetosHome'} asChild>
-                    <TouchableOpacity style={styles.button} activeOpacity={0.8}> 
-                        <Text style={styles.buttonText}>Login</Text>
-                    </TouchableOpacity> 
-                </Link>
+                
+
+                <Button2Styles href='../projects/projetosHome' text='Login'/>
 
                 <Link href='./EsqueciSenha' asChild>
                     <TouchableOpacity style={styles.buttonEsqueceu} activeOpacity={0.8}> 
@@ -79,19 +78,6 @@ const styles = StyleSheet.create({
         color: CORES.branco,
         padding: 8,
     },
-    button: {
-        backgroundColor: CORES.branco,
-        width: '70%',
-        borderRadius: 20,
-        marginTop: '30%',
-        paddingVertical: 10,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    buttonText: {
-        color: CORES.secundaria,
-        fontSize: 24,
-    },
     buttonEsqueceu: {
         marginTop: 20,
     },
@@ -99,14 +85,12 @@ const styles = StyleSheet.create({
         fontSize: 12,
         color: CORES.branco,
         textAlign: 'center',
-        //fontFamily: fontFamily.body,
     },
     registerText: {
         fontSize: 12,
         color: CORES.branco,
         textDecorationLine: 'underline',
         textAlign: 'center',
-        //fontFamily: fontFamily.body,
     },
     buttonRegister: {
         position: 'absolute',

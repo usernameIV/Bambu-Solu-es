@@ -4,12 +4,13 @@ import { Stack } from "expo-router";
 import CORES from "../../../constants/cores";
 import ButtonLink from "../../components/button/ButtonLink";
 import { DataContext } from "./Context/DataContext";
+import StylesProject from "./ProjectsStyles/DadosProjetoStyle";
+import InputLink from "../../components/input/InputLink";
 
 export default function DadosProjeto() {
-
   const { projetoData, setProjetoData } = useContext(DataContext);
   return (
-    <View style={styles.container}>
+    <View style={StylesProject.container}>
       <Stack.Screen options={{ title: "Dados do Projeto" }} />
 
       <Text style={styles.text}>Título do projeto</Text>
@@ -72,27 +73,3 @@ export default function DadosProjeto() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: CORES.branco,
-  },
-  input: {
-    borderRadius: 10,
-    backgroundColor: CORES.principal,
-    color: CORES.branco,
-    height: 40,
-    marginTop: 5,
-    margin: "auto",
-    marginBottom: 12,
-    paddingLeft: 10,
-    fontSize: 16,
-    width: "90%",
-  },
-  text: {
-    fontWeight: "bold",
-    color: CORES.cinza,
-    marginTop: 5,
-    marginLeft: "2%",
-  },
-});

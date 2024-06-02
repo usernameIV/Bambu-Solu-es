@@ -2,7 +2,7 @@ import React , {useContext} from "react";
 import { View } from "react-native";
 import { Stack } from "expo-router";
 import ButtonLink from "../../components/button/ButtonLink";
-import StylesClient from "./ProjectsStyles.js/DadosClienteStyle";
+import StylesClient from "./ProjectsStyles/DadosClienteStyle";
 import InputLink from "../../components/input/InputLink";
 import { DataContext } from "./Context/DataContext";
 
