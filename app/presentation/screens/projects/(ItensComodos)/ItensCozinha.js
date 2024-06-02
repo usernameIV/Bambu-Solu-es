@@ -1,28 +1,28 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { Link, Stack } from "expo-router";
-import CORES from '../../../constants/cores' ;
+import CORES from '../../../../constants/cores';
+import ButtonLink from '../../../components/button/ButtonLink';
 
 const roomItems = [
-  'Itens Sala - Chão',
-  'Itens Sala - Parede',
-  'Itens Sala - Teto',
+  'Itens Cozinha - Chão',
+  'Itens Cozinha - Parede',
+  'Itens Cozinha - Teto',
 ];
 
 const chipItemsChao = [
-  'Tapete', 'Sofá', 'Raque','Vasos', 'Mesa Centro', 'Poltrona', 'Puff', 
-  'Banco', 'Cadeiras',  'Futon', 'Bancos', 'Mesa Lateral', 
+  'Armários de chão', 'Ilha de cozinha', 'Mesas', 'Cadeiras', 'Bancos', 'Tapetes', 
+  'Eletrodomésticos', 'Lixeiras', 'Carrinhos de cozinha', 'Prateleiras de chão', 'Gaveteiros',
 ];
 
 const chipItemsParede = [
-  'Estantes de parede', 'Prateleiras', 'Nichos', 'Suporte pra TV', 'Espelhos', 
-  'Cabideiros', 'Caixas Org.', 'Placas', 'Letreiros', 'Quadros', 'Vasos de planta', 
-  'Galerias'
+  'Prateleiras', 'Armários aéreos', 'Ganchos', 'Suportes para utensílios', 'Quadros', 
+  'Relógios', 'Porta temperos', 'Porta facas', 'Painéis decorativos', 'Plantas pendentes',
 ];
 
 const chipItemsTeto = [
-  'Lustres', 'Plafons', 'Arandelas', 'Ventilador', 'Cortinas', 'Toldos', 
-  'Painéis acústicos', 'Sistema de som', 'Barras de apoio'
+  'Lustres', 'Plafons', 'Arandelas', 'Exaustores', 'Ventiladores de teto', 
+  'Cortinas', 'Persianas', 'Painéis acústicos', 'Luminárias suspensas', 'Sistema de som',
 ];
 
 const GreenCardScreen = () => {
@@ -30,7 +30,7 @@ const GreenCardScreen = () => {
   const [selectedChips, setSelectedChips] = useState({
     chao: [],
     parede: [],
-    teto: []
+    teto: [],
   });
 
   const handlePress = (index) => {
@@ -54,15 +54,15 @@ const GreenCardScreen = () => {
     let chipType;
     
     switch(item) {
-      case 'Itens Sala - Chão':
+      case 'Itens Cozinha - Chão':
         chipItems = chipItemsChao;
         chipType = 'chao';
         break;
-      case 'Itens Sala - Parede':
+      case 'Itens Cozinha - Parede':
         chipItems = chipItemsParede;
         chipType = 'parede';
         break;
-      case 'Itens Sala - Teto':
+      case 'Itens Cozinha - Teto':
         chipItems = chipItemsTeto;
         chipType = 'teto';
         break;
@@ -112,16 +112,12 @@ const GreenCardScreen = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Stack.Screen options={{ title: "Dados da Mobilia - Sala" }} />
+      <Stack.Screen options={{ title: "Dados da Mobilia - Cozinha" }} />
       <View style={styles.card}>
         {roomItems.map((item, index) => renderRoomItem(item, index))}
       </View>
 
-      <Link style={styles.buttonText} href='../context/ConfirmarDados' asChild>
-      <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}> Salvar e continuar </Text>
-        </TouchableOpacity>
-      </Link> 
+      <ButtonLink href={"../DadosMobilia"} text={"Salvar e continuar"} />
     </ScrollView>
   );
 };
@@ -135,11 +131,11 @@ const styles = StyleSheet.create({
   },
   card: {
     width: '95%',
-    height: '80%',
+    height:'80%',
     backgroundColor: CORES.principal,
     borderRadius: 10,
     padding: 15,
-    marginBottom: 130,
+    marginBottom: 20,
     marginVertical: 10,
     justifyContent: 'flex-start',
   },
@@ -200,8 +196,7 @@ const styles = StyleSheet.create({
     width: '90%',
     borderRadius: 10,
     height: 50,
-    margin: 'auto',
-    bottom: '10%',
+    marginTop: 20,
     justifyContent: 'center',
     alignItems: 'center',
     elevation: 6,

@@ -1,7 +1,7 @@
 import { Link} from 'expo-router';
 import React from 'react';
 import { Image, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import CORES from '../../../constants/cores' ;
+import CORES from '../../../constants/cores';
 export default function ProjetosHome() {
     
     return (

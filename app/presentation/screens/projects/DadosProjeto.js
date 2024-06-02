@@ -3,9 +3,11 @@ import { View, Text, StyleSheet, TextInput } from "react-native";
 import { Stack } from "expo-router";
 import CORES from "../../../constants/cores";
 import ButtonLink from "../../components/button/ButtonLink";
+import { DataContext } from "./Context/DataContext";
 
 export default function DadosProjeto() {
 
+  const { projetoData, setProjetoData } = useContext(DataContext);
   return (
     <View style={styles.container}>
       <Stack.Screen options={{ title: "Dados do Projeto" }} />
@@ -15,6 +17,10 @@ export default function DadosProjeto() {
         placeholder="Título do projeto"
         placeholderTextColor={CORES.branco}
         style={styles.input}
+        value={projetoData.titulo}
+        onChangeText={(text) =>
+          setProjetoData({ ...projetoData, titulo: text })
+        }
       />
 
       <Text style={styles.text}>Endereço</Text>
@@ -22,6 +28,10 @@ export default function DadosProjeto() {
         placeholder="Endereço do projeto"
         placeholderTextColor={CORES.branco}
         style={styles.input}
+        value={projetoData.enderecoProjeto}
+        onChangeText={(text) =>
+          setProjetoData({ ...projetoData, enderecoProjeto: text })
+        }
       />
 
       <Text style={styles.text}>Tipo de construção</Text>
@@ -29,6 +39,10 @@ export default function DadosProjeto() {
         placeholder="Resid. Comerc. Indust."
         placeholderTextColor={CORES.branco}
         style={styles.input}
+        value={projetoData.tipoConstrucao}
+        onChangeText={(text) =>
+          setProjetoData({ ...projetoData, tipoConstrucao: text })
+        }
       />
 
       <Text style={styles.text}>Tamanho da construção</Text>
@@ -36,6 +50,10 @@ export default function DadosProjeto() {
         placeholder="Em m²"
         placeholderTextColor={CORES.branco}
         style={styles.input}
+        value={projetoData.tamanhoConstrucao}
+        onChangeText={(text) =>
+          setProjetoData({ ...projetoData, tamanhoConstrucao: text })
+        }
       />
 
       <Text style={styles.text}>Orçamento</Text>
@@ -43,6 +61,10 @@ export default function DadosProjeto() {
         placeholder="Orçamento inicial"
         placeholderTextColor={CORES.branco}
         style={styles.input}
+        value={projetoData.orcamento}
+        onChangeText={(text) =>
+          setProjetoData({ ...projetoData, orcamento: text })
+        }
       />
 
       <ButtonLink href="./DadosAmbiente" text="Salvar e continuar" />

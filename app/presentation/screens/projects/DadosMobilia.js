@@ -9,7 +9,7 @@ const furnitureTypes = [
 ];
 
 const roomItems = [
-  { name: 'Itens Sala', link: './DadosMobiliaSalaChao' },
+  { name: 'Itens Sala', link: './ItensSala' },
   { name: 'Itens Quarto', link: './ItensQuarto' },
   { name: 'Itens Cozinha', link: './ItensCozinha' },
   { name: 'Itens Antessala', link: './ItensAntessala' },
@@ -65,7 +65,7 @@ const MultiSelectChips = () => {
         keyExtractor={(item) => item.name}
         contentContainerStyle={styles.roomItemsContainer}
       />
-      <Link href='./DadosMobiliaSala' asChild>
+      <Link href='./HomeComProjetos' asChild>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}> Salvar e continuar </Text>
         </TouchableOpacity>
