@@ -17,7 +17,7 @@ const ProjetoDetalhesScreen = () => {
           <Text style={styles.subTopic}>Próxima etapa</Text>
           <Text style={styles.description}>- Reunião com M.O</Text>
         </View>
-
+ 
         <View style={styles.secondaryTopic}>
           <Text style={styles.secondary}>- Sobre a obra</Text>
           <Text style={styles.subTopic}>Endereço</Text>

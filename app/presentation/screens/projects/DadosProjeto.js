@@ -16,7 +16,7 @@ export default function DadosProjeto() {
         placeholderTextColor={CORES.branco}
         style={styles.input}
       />
-
+ 
       <Text style={styles.text}>Endereço</Text>
       <TextInput
         placeholder="Endereço do projeto"

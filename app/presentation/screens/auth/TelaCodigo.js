@@ -19,7 +19,7 @@ export default function TelaCodigo() {
                     </View>
                 </View>
             </View>
-
+ 
             <Text style={styles.mainText}>INSIRA O CÓDIGO </Text>
 
             <Text style={styles.infoText}>Insira o código{'\n'}recebido no e-mail...</Text>

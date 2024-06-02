@@ -24,7 +24,7 @@ export default function Register(){
                 source={require('../../assets/icons/logo.png')}
                 resizeMode='contain'
             />
-
+ 
             <Animatable.View animation="fadeInUp" style={styles.containerForm}>
                 <TextInput 
                     placeholder="E-mail" 

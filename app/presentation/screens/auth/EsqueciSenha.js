@@ -42,7 +42,7 @@ export default function EsqueciSenha() {
         </View>
     );
 };
-
+ 
 const styles = StyleSheet.create({
     
 container: {

@@ -74,7 +74,7 @@ export default function AdvancedInfo() {
           <Text style={styles.texto}>Iluminação natural?</Text>
           <Checkbox
             style={styles.checkbox}
-            
+             
           />
         </View>
         <View style={styles.row}>

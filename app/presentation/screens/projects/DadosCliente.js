@@ -16,7 +16,7 @@ export default function DadosCliente() {
         placeholderTextColor={CORES.branco}
         style={styles.input}
       />
-
+ 
       <Text style={styles.text}>Endereço</Text>
       <TextInput
         placeholder="Endereço do cliente"

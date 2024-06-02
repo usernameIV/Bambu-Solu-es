@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { Link, Stack } from "expo-router";
 import CORES from '../../../constants/cores' ;
-
+ 
 const roomItems = [
   'Itens Sala - Chão',
   'Itens Sala - Parede',

@@ -26,7 +26,7 @@ const ProjectCard = ({ title, startDate, endDate, progress }) => {
     </View>
   );
 };
-
+ 
 const ProjectScreen = () => {
   return (
     <View style={styles.container}>
