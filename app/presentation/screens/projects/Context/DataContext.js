@@ -47,6 +47,7 @@ export const DataProvider = ({ children }) => {
         setCheckbox,
       }}
     >
+      
       {children}
     </DataContext.Provider>
   );
