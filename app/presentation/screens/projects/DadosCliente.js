@@ -1,20 +1,22 @@
 import React , {useContext} from "react";
 import { View } from "react-native";
 import { Stack } from "expo-router";
+
 import ButtonLink from "../../components/button/ButtonLink";
+import { DataContext } from "./Context/DataContext";
 import StylesClient from "./ProjectsStyles/DadosClienteStyle";
 import InputLink from "../../components/input/InputLink";
-import { DataContext } from "./Context/DataContext";
+
 
 export default function DadosCliente() {
   const { clienteData, setClienteData } = useContext(DataContext);
-
   return (
     <View style={StylesClient.container}>
       <Stack.Screen options={{ title: "Dados do Cliente" }} />
       <InputLink
         placeholder={"Nome do cliente"}
         text={"Nome"}
+        style={StylesClient.input}
         value={clienteData.nome}
         onChangeText={(text) => setClienteData({ ...clienteData, nome: text })}
       />

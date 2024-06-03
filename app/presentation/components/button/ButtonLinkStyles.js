@@ -3,11 +3,13 @@ import CORES from '../../../constants/cores';
 
 const ButtonStyles = StyleSheet.create({
   button: {
+    position: 'absolute',
+    top: '90%',
     backgroundColor: CORES.secundaria,
     width: "80%",
     borderRadius: 10,
     height: 45,
-    margin: "auto",
+    marginLeft: "10%",
     justifyContent: "center",
     alignItems: "center",
     elevation: 6,

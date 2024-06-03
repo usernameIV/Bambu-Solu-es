@@ -18,21 +18,6 @@ const StylesClient = StyleSheet.create({
       fontSize: 16,
       width: '90%',
   }, 
-   cabecalho:{
-    position: 'relative',
-     backgroundColor: CORES.secundaria,
-     flexDirection:'row',
-     alig:'center',
-     height: '10%',
-  },
-  imagem: {
-    alignSelf: 'center',
-    justifyContent: 'center',
-    marginTop: '7%',
-    width: 60, 
-    height: 80, 
-    resizeMode: 'contain',
-  },
   text: {
     fontWeight: 'bold',
     color: CORES.cinza,

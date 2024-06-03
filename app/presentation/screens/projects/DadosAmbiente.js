@@ -5,7 +5,8 @@ import CORES from "../../../constants/cores";
 import Checkbox from "expo-checkbox";
 import ButtonLink from "../../components/button/ButtonLink";
 import { DataContext } from "./Context/DataContext";
-import stylesAmbiente from "./ProjectsStyles/DadosAmbienteStyle";
+import { useContext } from "react";
+import StylesAmbiente from "./ProjectsStyles/DadosAmbienteStyle";
 
 
 export default function AdvancedInfo() {
@@ -20,64 +21,64 @@ export default function AdvancedInfo() {
   };
   return (
 
-    <View style={stylesAmbiente.container}>
+    <View style={StylesAmbiente.container}>
       <Stack.Screen options={{ title: "Dados do Ambiente" }} />
       <View>
-        <TouchableOpacity style={stylesAmbiente.title}>
-          <Text style={stylesAmbiente.titleText}>CARACTERÍSTICAS DO PROJETO</Text>
+        <TouchableOpacity style={StylesAmbiente.title}>
+          <Text style={StylesAmbiente.titleText}>CARACTERÍSTICAS DO PROJETO</Text>
         </TouchableOpacity>
-        <View style={stylesAmbiente.row}>
-          <Text style={stylesAmbiente.texto}>Contém restrições?</Text>
+        <View style={StylesAmbiente.row}>
+          <Text style={StylesAmbiente.texto}>Contém restrições?</Text>
           <Checkbox
             value={checkboxes.restricoes}
             onValueChange={(value) => setCheckbox("restricoes", value)}
             color={checkboxes.restricoes ? CORES.secundaria : undefined}
-            style={stylesAmbiente.checkbox}
+            style={StylesAmbiente.checkbox}
           />
         </View>
-        <View style={stylesAmbiente.row}>
-          <Text style={stylesAmbiente.texto}>Sustentabilidade?</Text>
+        <View style={StylesAmbiente.row}>
+          <Text style={StylesAmbiente.texto}>Sustentabilidade?</Text>
           <Checkbox
             value={checkboxes.sustentabilidade}
             onValueChange={(value) => setCheckbox("sustentabilidade", value)}
             color={checkboxes.sustentabilidade ? CORES.secundaria : undefined}
-            style={stylesAmbiente.checkbox}
+            style={StylesAmbiente.checkbox}
           />
         </View>
-        <View style={stylesAmbiente.row}>
-          <Text style={stylesAmbiente.texto}>Acessibilidade?</Text>
+        <View style={StylesAmbiente.row}>
+          <Text style={StylesAmbiente.texto}>Acessibilidade?</Text>
           <Checkbox
             value={checkboxes.acessibilidade}
             onValueChange={(value) => setCheckbox("acessibilidade", value)}
             color={checkboxes.acessibilidade ? CORES.secundaria : undefined}
-            style={stylesAmbiente.checkbox}
+            style={StylesAmbiente.checkbox}
           />
         </View>
       </View>
       <View>
-        <TouchableOpacity style={stylesAmbiente.title}>
-          <Text style={stylesAmbiente.titleText}>CARACTERÍSTICAS DO AMBIENTE</Text>
+        <TouchableOpacity style={StylesAmbiente.title}>
+          <Text style={StylesAmbiente.titleText}>CARACTERÍSTICAS DO AMBIENTE</Text>
         </TouchableOpacity>
-        <View style={stylesAmbiente.row}>
-          <Text style={stylesAmbiente.texto}>Ventilação natural?</Text>
+        <View style={StylesAmbiente.row}>
+          <Text style={StylesAmbiente.texto}>Ventilação natural?</Text>
           <Checkbox
             value={checkboxes.ventilacaoNatural}
             onValueChange={(value) => setCheckbox("ventilacaoNatural", value)}
             color={checkboxes.ventilacaoNatural ? CORES.secundaria : undefined}
-            style={stylesAmbiente.checkbox}
+            style={StylesAmbiente.checkbox}
           />
         </View>
-        <View style={stylesAmbiente.row}>
-          <Text style={stylesAmbiente.texto}>Isolamento acústico?</Text>
+        <View style={StylesAmbiente.row}>
+          <Text style={StylesAmbiente.texto}>Isolamento acústico?</Text>
           <Checkbox
             value={checkboxes.isolamentoAcustico}
             onValueChange={(value) => setCheckbox("isolamentoAcustico", value)}
             color={checkboxes.isolamentoAcustico ? CORES.secundaria : undefined}
-            style={stylesAmbiente.checkbox}
+            style={StylesAmbiente.checkbox}
           />
         </View>
-        <View style={stylesAmbiente.row}>
-          <Text style={stylesAmbiente.texto}>Eficiência energética?</Text>
+        <View style={StylesAmbiente.row}>
+          <Text style={StylesAmbiente.texto}>Eficiência energética?</Text>
           <Checkbox
             value={checkboxes.eficienciaEnergetica}
             onValueChange={(value) =>
@@ -86,25 +87,25 @@ export default function AdvancedInfo() {
             color={
               checkboxes.eficienciaEnergetica ? CORES.secundaria : undefined
             }
-            style={stylesAmbiente.checkbox}
+            style={StylesAmbiente.checkbox}
           />
         </View>
-        <View style={stylesAmbiente.row}>
-          <Text style={stylesAmbiente.texto}>Iluminação natural?</Text>
+        <View style={StylesAmbiente.row}>
+          <Text style={StylesAmbiente.texto}>Iluminação natural?</Text>
           <Checkbox
             value={checkboxes.iluminacaoNatural}
             onValueChange={(value) => setCheckbox("iluminacaoNatural", value)}
             color={checkboxes.iluminacaoNatural ? CORES.secundaria : undefined}
-            style={stylesAmbiente.checkbox} 
+            style={StylesAmbiente.checkbox} 
           />
         </View>
-        <View style={stylesAmbiente.row}>
-          <Text style={stylesAmbiente.texto}>Ventilação?</Text>
+        <View style={StylesAmbiente.row}>
+          <Text style={StylesAmbiente.texto}>Ventilação?</Text>
           <Checkbox
             value={checkboxes.ventilacao}
             onValueChange={(value) => setCheckbox("ventilacao", value)}
             color={checkboxes.ventilacao ? CORES.secundaria : undefined}
-            style={stylesAmbiente.checkbox}
+            style={StylesAmbiente.checkbox}
           />
         </View>
       </View>

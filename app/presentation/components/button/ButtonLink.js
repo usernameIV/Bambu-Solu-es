@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, TouchableOpacity } from "react-native";
 import { Link } from "expo-router";
-import ButtonStyles from "./ButtonStyles";
+import ButtonStyles from "./ButtonLinkStyles";
 
 const ButtonLink = ({ href, text, ...rest }) => {
   return (
