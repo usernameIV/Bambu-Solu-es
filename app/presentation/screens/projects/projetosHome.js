@@ -21,7 +21,7 @@ export default function ProjetosHome() {
                     </View>
                 </View>
             </View>
-
+ 
             <Text style={StylesProjetoHome.mainText}>Não existem projetos no{'\n'}momento</Text>
             <Text style={StylesProjetoHome.infoText}>Adicionar um{'\n'}novo projeto</Text>
 
