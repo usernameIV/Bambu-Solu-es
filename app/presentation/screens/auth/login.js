@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { Link } from 'expo-router';
 import CORES from '../../../constants/cores';
 import * as Animatable from 'react-native-animatable';
@@ -48,4 +48,3 @@ export default function Login() {
         </View>
     );
 };
-

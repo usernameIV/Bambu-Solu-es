@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, StyleSheet, TextInput} from 'react-native';
+import {View} from 'react-native';
 import CORES from '../../../constants/cores' ;
 import * as Animatable from 'react-native-animatable';
 import WhiteButton from '../../components/button/ButtonWhite';

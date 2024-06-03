@@ -1,7 +1,6 @@
 import React from 'react';
-import { Image, View, Text, StyleSheet, TextInput} from 'react-native';
+import { Image, View, Text, TextInput} from 'react-native';
 import CORES from '../../../constants/cores';
-import ButtonLink from '../../components/button/ButtonLink';
 import * as Animatable from 'react-native-animatable';
 import StylesEsqueciSenha from './AuthStyles/EsqueciSenhaStyle';
 import WhiteButton from '../../components/button/ButtonWhite';

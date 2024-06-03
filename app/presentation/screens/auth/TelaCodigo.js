@@ -1,11 +1,10 @@
 import React from 'react';
-import {Image, View, Text, StyleSheet} from 'react-native';
+import {Image, View, Text} from 'react-native';
 import CORES from '../../../constants/cores';
 import * as Animatable from 'react-native-animatable';
 import Button2Styles from '../../components/button/ButtonWhite';
 import InputLink from '../../components/input/InputLink';
 import StylesTelaCodigo from './AuthStyles/TelaCodigoStyle';
-
 
 export default function TelaCodigo() {
 
@@ -44,6 +43,3 @@ export default function TelaCodigo() {
         </View>
     );
 };
-
-
-
