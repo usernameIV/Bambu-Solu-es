@@ -26,11 +26,13 @@ export default function ProjetosHome() {
             <Text style={StylesProjetoHome.infoText}>Adicionar um{'\n'}novo projeto</Text>
 
             <View style={StylesProjetoHome.BotoesTemporarios}>             
+
                 <ButtonPlus href={"./DadosCliente"} ImgSource = {require('../../assets/icons/iconAdd.png')}/>
-                <ButtonPlus href={"./HomeComProjetos"} ImgSource = {require('../../assets/icons/iconAdd.png')}/>
-                <ButtonPlus href={"./TelaSobreProjetos"} ImgSource = {require('../../assets/icons/iconAdd.png')}/>              
+                
             </View>
             
+                <ButtonPlus href={"./Agenda"} ImgSource = {require('../../assets/icons/iconAdd.png')}/>    
+                <Text style={StylesProjetoHome.infoText}>AGENDA!</Text>
         </View>
     );
 };

@@ -111,6 +111,7 @@ export default function AdvancedInfo() {
       </View>
 
       <ButtonLink href="./DadosMobilia" text={"Salvar e continuar"} 
+      
       onPress={saveState}/>
     </View>
   );

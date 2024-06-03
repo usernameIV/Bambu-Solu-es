@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import CORES from '../../../constants/cores';
+import { View, Text,TouchableOpacity } from 'react-native';
 import { Link } from 'expo-router';
 import StylesProjeto from "./ProjectsStyles/TelaSobreProjetoStyle";
 
@@ -65,3 +64,5 @@ const ProjetoDetalhesScreen = () => {
     </View>
   );
 };
+
+export default ProjetoDetalhesScreen;

@@ -42,5 +42,14 @@ const StylesTelaCodigo = StyleSheet.create({
         alignItems: 'center',
         marginTop: '20%',
     },
+    input: {
+        borderWidth: 2,
+        borderColor: CORES.branco,
+        fontSize: 14,
+        width: '80%',
+        color: CORES.branco,
+        padding: 8,
+    },
 });
+
 export default StylesTelaCodigo;

@@ -18,12 +18,12 @@ const StylesClient = StyleSheet.create({
       fontSize: 16,
       width: '90%',
   }, 
-  text: {
-    fontWeight: 'bold',
-    color: CORES.cinza,
-    marginTop: 5,
-    marginLeft: '2%',
+    text: {
+      fontWeight: 'bold',
+      color: CORES.cinza,
+      marginTop: 5,
+      marginLeft: '2%',
   },
-  });
+});
 
-  export default StylesClient;
+export default StylesClient;

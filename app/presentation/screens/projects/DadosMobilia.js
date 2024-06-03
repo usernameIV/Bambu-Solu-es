@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
 import { Link, Stack } from "expo-router";
-import CORES from '../../../constants/cores';
+import StylesMobilia from './ProjectsStyles/DadosMobiliaStyle';
 
 const furnitureTypes = [
   'Rústica', 'Escandinava', 'Art Deco',  'Boêmio',  'Clássica',
@@ -28,126 +28,50 @@ const MultiSelectChips = () => {
 
   const renderRoomItem = ({ item }) => (
     <Link href={item.link} asChild>
-      <TouchableOpacity style={styles.roomItem}>
-        <Text style={styles.roomItemText}>{item.name}</Text>
-        <Text style={styles.arrow}> {'\>'} </Text>
+      <TouchableOpacity style={StylesMobilia.roomItem}>
+        <Text style={StylesMobilia.roomItemText}>{item.name}</Text>
+        <Text style={StylesMobilia.arrow}> {'\>'} </Text>
       </TouchableOpacity>
     </Link>
   );
 
   return (
-    <View style={styles.container}>
+    <View style={StylesMobilia.container}>
       <Stack.Screen options={{ title: "Dados da Mobilia" }} />
-      <Text style={styles.header}>• Tipo da mobília</Text>
-      <View style={styles.chipsContainer}>
+      <Text style={StylesMobilia.header}>• Tipo da mobília</Text>
+      <View style={StylesMobilia.chipsContainer}>
         {furnitureTypes.map((item) => (
           <TouchableOpacity
             key={item}
             style={[
-              styles.chip,
-              selected.includes(item) && styles.selectedChip,
+              StylesMobilia.chip,
+              selected.includes(item) && StylesMobilia.selectedChip,
             ]}
             onPress={() => toggleSelection(item)}
           >
             <Text style={[
-              styles.chipText,
-              selected.includes(item) && styles.selectedChipText
+              StylesMobilia.chipText,
+              selected.includes(item) && StylesMobilia.selectedChipText
             ]}>
               {item}
             </Text>
           </TouchableOpacity>
         ))}
       </View>
-      <Text style={styles.header}>• Itens da mobília</Text>
+      <Text style={StylesMobilia.header}>• Itens da mobília</Text>
       <FlatList
         data={roomItems}
         renderItem={renderRoomItem}
         keyExtractor={(item) => item.name}
-        contentContainerStyle={styles.roomItemsContainer}
+        contentContainerStyle={StylesMobilia.roomItemsContainer}
       />
       <Link href='./HomeComProjetos' asChild>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}> Salvar e continuar </Text>
+        <TouchableOpacity style={StylesMobilia.button}>
+          <Text style={StylesMobilia.buttonText}> Salvar e continuar </Text>
         </TouchableOpacity>
       </Link>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 20,
-    backgroundColor: CORES.branco,
-    height: '100%',
-  },
-  header: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginVertical: 10,
-    color: CORES.secundaria,
-  },
-  chipsContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'flex-start',
-  },
-  chip: {
-    borderWidth: 1,
-    borderColor: CORES.principal,
-    borderRadius: 30,
-    paddingVertical: 10,
-    paddingHorizontal: 15,
-    backgroundColor: CORES.branco,
-    elevation: 6,
-    margin: 5,
-  },
-  selectedChip: {
-    backgroundColor: CORES.secundaria,
-    borderColor: CORES.secundaria,
-  },
-  chipText: {
-    color: CORES.preto,
-  },
-  selectedChipText: {
-    color: CORES.branco,
-  },
-  roomItemsContainer: {
-    marginTop: 10,
-  },
-  roomItem: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    borderRadius: 5,
-    borderWidth: 2,
-    borderColor: CORES.principal,
-    padding: 7,
-    marginBottom: 12,
-    backgroundColor: CORES.branco,
-    elevation: 5,
-  },
-  roomItemText: {
-    fontSize: 18,
-    color: CORES.secundaria,
-  },
-  arrow: {
-    fontSize: 25,
-    color: CORES.secundaria,
-  },
-  button: {
-    backgroundColor: CORES.secundaria,
-    width: '90%',
-    borderRadius: 10,
-    height: 50,
-    margin: 'auto',
-    justifyContent: 'center',
-    alignItems: 'center',
-    elevation: 6,
-  },
-  buttonText: {
-    color: CORES.branco,
-    fontWeight: 'bold',
-  },
-});
 
 export default MultiSelectChips;

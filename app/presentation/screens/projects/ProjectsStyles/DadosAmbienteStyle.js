@@ -15,7 +15,7 @@ const StylesAmbiente = StyleSheet.create({
       fontSize: 18,
       color: CORES.secundaria,
       flex: 1,
-      padding: 20,
+      padding: 15,
     },
     checkbox: {
       marginRight: 20,
@@ -34,5 +34,6 @@ const StylesAmbiente = StyleSheet.create({
       textAlign: "center",
     },
   });
+  
 export default StylesAmbiente;
   

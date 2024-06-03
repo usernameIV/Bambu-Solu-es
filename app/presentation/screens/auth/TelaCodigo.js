@@ -29,8 +29,10 @@ export default function TelaCodigo() {
 
             <Animatable.View animation="fadeInUp" style={StylesTelaCodigo.containerForm}>
                 
-                <InputLink placeholder={"Código Recebido"} 
+                <InputLink 
+                placeholder={"Código Recebido"} 
                 placeholderTextColor={CORES.branco} 
+                style={StylesTelaCodigo.input}
                 keyboardType="email-address" 
                 autoCapitalize="none"/>
         
