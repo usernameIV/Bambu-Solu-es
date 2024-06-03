@@ -22,10 +22,6 @@ export default function TelaCodigo() {
                     </View>
                 </View>
             </View>
-<<<<<<< HEAD
- 
-            <Text style={styles.mainText}>INSIRA O CÓDIGO </Text>
-=======
 
             <Text style={StylesTelaCodigo.mainText}>INSIRA O CÓDIGO </Text>
 
@@ -41,7 +37,6 @@ export default function TelaCodigo() {
                 autoCapitalize="none"/>
         
                 <Button2Styles href={"./login"} text={"Enviar Código"}/>
->>>>>>> 65ade162e94d8f613afd5a3790834779f1eac290
 
 
             </Animatable.View>

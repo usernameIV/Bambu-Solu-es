@@ -13,11 +13,7 @@ const AgendaScreen = () => {
     '19', '20', '21', '22', '23', '24', '25',
     '26', '27', '28', '29', '30', '31', '1'
   ];
-<<<<<<< HEAD:app/presentation/screens/projects/MarcarAgenda.js
-  
-=======
 
->>>>>>> 65ade162e94d8f613afd5a3790834779f1eac290:app/presentation/screens/projects/Agenda.js
   return (
     <View style={styles.container}>
 

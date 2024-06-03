@@ -19,20 +19,11 @@ export default function DadosProjeto() {
           setProjetoData({ ...projetoData, titulo: text })
         }
       />
-<<<<<<< HEAD
- 
-      <Text style={styles.text}>Endereço</Text>
-      <TextInput
-        placeholder="Endereço do projeto"
-        placeholderTextColor={CORES.branco}
-        style={styles.input}
-=======
       <InputLink
         placeholder="Endereço do projeto" text={"Endereço"} placeholderTextColor={CORES.branco} value={projetoData.enderecoProjeto}
         onChangeText={(text) =>
           setProjetoData({ ...projetoData, enderecoProjeto: text })
         }
->>>>>>> 65ade162e94d8f613afd5a3790834779f1eac290
       />
       <InputLink
         placeholder="Resid. Comerc. Indust." text={"Tipo de construção"} placeholderTextColor={CORES.branco} value={projetoData.tipoConstrucao}

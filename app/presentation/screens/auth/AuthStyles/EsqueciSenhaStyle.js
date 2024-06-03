@@ -31,11 +31,7 @@ const StylesEsqueciSenha = StyleSheet.create({
         fontSize: 20,
         textAlign: 'center',
         marginTop: 20,
-<<<<<<< HEAD
-    }, 
-=======
     },
->>>>>>> 65ade162e94d8f613afd5a3790834779f1eac290
     infoText: {
         color: CORES.branco,
         fontSize: 16,

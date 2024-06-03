@@ -27,7 +27,7 @@ const ProjectCard = ({ title, startDate, endDate, progress }) => {
     
   );
 };
- 
+
 const ProjectScreen = () => {
   return (
    

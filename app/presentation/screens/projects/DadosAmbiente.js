@@ -93,8 +93,10 @@ export default function AdvancedInfo() {
         <View style={StylesAmbiente.row}>
           <Text style={StylesAmbiente.texto}>Iluminação natural?</Text>
           <Checkbox
-            style={styles.checkbox}
-            
+            value={checkboxes.iluminacaoNatural}
+            onValueChange={(value) => setCheckbox("iluminacaoNatural", value)}
+            color={checkboxes.iluminacaoNatural ? CORES.secundaria : undefined}
+            style={StylesAmbiente.checkbox} 
           />
         </View>
         <View style={StylesAmbiente.row}>

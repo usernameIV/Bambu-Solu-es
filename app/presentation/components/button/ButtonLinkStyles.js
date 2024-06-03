@@ -19,6 +19,6 @@ const ButtonStyles = StyleSheet.create({
     color: CORES.branco,
     fontWeight: "bold",
   },
-}); 
+});
 
 export default ButtonStyles;

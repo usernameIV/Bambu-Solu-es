@@ -27,16 +27,9 @@ export default function Register(){
                 source={require('../../assets/icons/logo.png')}
                 resizeMode='contain'
             />
-<<<<<<< HEAD
- 
-            <Animatable.View animation="fadeInUp" style={styles.containerForm}>
-                <TextInput 
-                    placeholder="E-mail" 
-=======
             <Animatable.View animation="fadeInUp" style={StylesRegister.containerForm}>
                 <InputLog 
                     placeholder={"E-mail"} 
->>>>>>> 65ade162e94d8f613afd5a3790834779f1eac290
                     placeholderTextColor={CORES.branco} 
                     keyboardType={"email-address"} 
                     utoCapitalize={"none"} 
