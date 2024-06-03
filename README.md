@@ -2,7 +2,8 @@
 
 
 ## Git: Ferramenta de controle de versão.
-- [Git Download](https://www.git-scm.com/downloads)
+- [Git](https://www.git-scm.com/downloads)
+
 Após instalar, verifique a instalação usando o comando:
 ```sh
 git --version
@@ -59,7 +60,7 @@ Para rodar a aplicação em um emulador Android ou dispositivo físico, siga os 
 
 ## 3.1 Configurar Variáveis de Ambiente
 
-Ao abrir o Android Studio, inicialmente e necessariamente sem projetos, acesso “More Actions” e logo em seguida “Virtual Device Manager” 
+Ao abrir o Android Studio, inicialmente e necessariamente sem projetos, acesse “More Actions” e logo em seguida “Virtual Device Manager” 
 
 ## 3.2 Iniciar o Emulador Android
 
