@@ -7,7 +7,7 @@ export default function ProjetosHome() {
     return (
         <View style={StylesProjetoHome.container}>
             <View style={StylesProjetoHome.cabecalho}>
-                <Image source={require('../../assets/icons/iconLogo.png')} />
+                <Image source={require('../../assets/icons/iconLogo.png')}/>
                 <Text style={StylesProjetoHome.namePage}>Projetos</Text>
             </View>
             <View style={StylesProjetoHome.circleContainer}>
@@ -26,9 +26,7 @@ export default function ProjetosHome() {
             <Text style={StylesProjetoHome.infoText}>Adicionar um{'\n'}novo projeto</Text>
 
             <View style={StylesProjetoHome.BotoesTemporarios}>             
-
                 <ButtonPlus href={"./DadosCliente"} ImgSource = {require('../../assets/icons/iconAdd.png')}/>
-                
             </View>
             
                 <ButtonPlus href={"./Agenda"} ImgSource = {require('../../assets/icons/iconAdd.png')}/>    
