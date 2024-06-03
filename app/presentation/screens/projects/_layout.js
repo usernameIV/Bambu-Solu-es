@@ -2,7 +2,7 @@ import React from "react";
 import { Stack, Tabs } from "expo-router";
 import CORES from "../../../constants/cores";
 import { DataProvider } from "./Context/DataContext";
-
+ 
 export default () => {
   return (
     <DataProvider>

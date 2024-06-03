@@ -7,7 +7,6 @@ import { DataContext } from "./Context/DataContext";
 import StylesClient from "./ProjectsStyles/DadosClienteStyle";
 import InputLink from "../../components/input/InputLink";
 
-
 export default function DadosProjeto() {
   const { projetoData, setProjetoData } = useContext(DataContext);
   return (

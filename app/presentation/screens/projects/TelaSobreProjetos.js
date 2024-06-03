@@ -33,9 +33,7 @@ const ProjetoDetalhesScreen = () => {
 
         <View style={StylesProjeto.innerButtonsContainer}>
           <TouchableOpacity style={StylesProjeto.innerButton}>
-            <Link href='./CaracProjetos'>
               <Text style={StylesProjeto.innerButtonText}>Características do projeto</Text>
-            </Link>
           </TouchableOpacity>
           
           <TouchableOpacity style={StylesProjeto.innerButton}>

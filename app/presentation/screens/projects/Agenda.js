@@ -16,7 +16,6 @@ const AgendaScreen = () => {
 
   return (
     <View style={styles.container}>
-
       <View style={styles.header}>
         <Text style={styles.monthYear}>{month} ({year})</Text>
       </View>

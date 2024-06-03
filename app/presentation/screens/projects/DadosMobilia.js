@@ -17,7 +17,6 @@ const roomItems = [
 
 const MultiSelectChips = () => {
   const [selected, setSelected] = useState([]);
-
   const toggleSelection = (type) => {
     if (selected.includes(type)) {
       setSelected(selected.filter((item) => item !== type));

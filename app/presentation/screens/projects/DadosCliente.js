@@ -20,7 +20,6 @@ export default function DadosCliente() {
         value={clienteData.nome}
         onChangeText={(text) => setClienteData({ ...clienteData, nome: text })}
       />
-
       <InputLink
         placeholder={"Endereço do cliente"}
         text={"Endereço"}
@@ -29,7 +28,6 @@ export default function DadosCliente() {
           setClienteData({ ...clienteData, endereco: text })
         }
       />
-
       <InputLink
         placeholder={"Telefone do cliente"}
         text={"Telefone"}

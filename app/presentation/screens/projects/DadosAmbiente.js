@@ -8,7 +8,6 @@ import { DataContext } from "./Context/DataContext";
 import { useContext } from "react";
 import StylesAmbiente from "./ProjectsStyles/DadosAmbienteStyle";
 
-
 export default function AdvancedInfo() {
   const { checkboxes, setCheckbox, projetoData, setProjetoData } =
     useContext(DataContext);

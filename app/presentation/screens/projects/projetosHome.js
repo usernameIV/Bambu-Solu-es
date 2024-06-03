@@ -3,11 +3,11 @@ import { Image, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import ButtonPlus from '../../components/button/ButtonPlus';
 import StylesProjetoHome from './ProjectsStyles/ProjetosHomeStyle';
 export default function ProjetosHome() {
-    
+
     return (
         <View style={StylesProjetoHome.container}>
             <View style={StylesProjetoHome.cabecalho}>
-                <Image source={require('../../assets/icons/iconLogo.png')}/>
+                <Image source={require('../../assets/icons/iconLogo.png')} />
                 <Text style={StylesProjetoHome.namePage}>Projetos</Text>
             </View>
             <View style={StylesProjetoHome.circleContainer}>
@@ -21,17 +21,17 @@ export default function ProjetosHome() {
                     </View>
                 </View>
             </View>
- 
+
             <Text style={StylesProjetoHome.mainText}>Não existem projetos no{'\n'}momento</Text>
             <Text style={StylesProjetoHome.infoText}>Adicionar um{'\n'}novo projeto</Text>
 
-            <View style={StylesProjetoHome.BotoesTemporarios}>             
-                <ButtonPlus href={"./DadosCliente"} ImgSource = {require('../../assets/icons/iconAdd.png')}/>
+            <View style={StylesProjetoHome.BotoesTemporarios}>
+                <ButtonPlus href={"./DadosCliente"} ImgSource={require('../../assets/icons/iconAdd.png')} />
             </View>
-            
-                <ButtonPlus href={"./Agenda"} ImgSource = {require('../../assets/icons/iconAdd.png')}/>    
-                <Text style={StylesProjetoHome.infoText}>AGENDA!</Text>
+
+            <ButtonPlus href={"./Agenda"} ImgSource={require('../../assets/icons/iconAdd.png')} />
+            <Text style={StylesProjetoHome.infoText}>AGENDA!</Text>
         </View>
     );
 };
- 
+

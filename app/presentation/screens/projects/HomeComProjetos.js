@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { Bar } from 'react-native-progress';
 import HomeComProjetosStyles from './ProjectsStyles/HomeComProjetosStyle';
 import CORES from '../../../constants/cores';
+import ButtonInfo from '../../components/button/ButtonInfo';
 
 const ProjectCard = ({ title, startDate, endDate, progress }) => {
   return (
@@ -22,7 +23,7 @@ const ProjectCard = ({ title, startDate, endDate, progress }) => {
         />
         <Text style={HomeComProjetosStyles.dateText}>Início {startDate}</Text>
         <Text style={HomeComProjetosStyles.dateText}>Previsão de entrega {endDate}</Text>
-        
+        <ButtonInfo href={"./TelaSobreProjetos"} ImgSource = {require('../../assets/icons/iconInfo.png')}/>
       </View>
     
   );
@@ -38,6 +39,7 @@ const ProjectScreen = () => {
           endDate="02/2030"
           progress={3}
         />
+        
       </View>
     
   );
