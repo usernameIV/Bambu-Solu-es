@@ -1,50 +1,40 @@
-import { Link} from 'expo-router';
 import React from 'react';
 import { Image, View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import CORES from '../../../constants/cores' ;
+import ButtonPlus from '../../components/button/ButtonPlus';
+import StylesProjetoHome from './ProjectsStyles/ProjetosHomeStyle';
 export default function ProjetosHome() {
     
     return (
-        <View style={styles.container}>
-            <View style={styles.cabecalho}>
-                <Image source={require('../../assets/icons/iconLogo.png')} />
-                <Text style={styles.namePage}>Projetos</Text>
+        <View style={StylesProjetoHome.container}>
+            <View style={StylesProjetoHome.cabecalho}>
+                <Image source={require('../../assets/icons/iconLogo.png')}/>
+                <Text style={StylesProjetoHome.namePage}>Projetos</Text>
             </View>
-            <View style={styles.circleContainer}>
-                <View style={styles.outerCircle}>
-                    <View style={styles.innerCircle}>
+            <View style={StylesProjetoHome.circleContainer}>
+                <View style={StylesProjetoHome.outerCircle}>
+                    <View style={StylesProjetoHome.innerCircle}>
                         <Image
                             source={require('../../assets/icons/iconLogo.png')}
-                            style={styles.image}
+                            style={StylesProjetoHome.image}
                             resizeMode='contain'
                         />
                     </View>
                 </View>
             </View>
+ 
+            <Text style={StylesProjetoHome.mainText}>Não existem projetos no{'\n'}momento</Text>
+            <Text style={StylesProjetoHome.infoText}>Adicionar um{'\n'}novo projeto</Text>
 
-            <Text style={styles.mainText}>Não existem projetos no{'\n'}momento</Text>
-
-            <Text style={styles.infoText}>Adicionar um{'\n'}novo projeto</Text>
-            <View style={styles.BotoesTemporarios}>
-                <Link style={styles.buttonText} href='./DadosCliente' asChild>
-                    <TouchableOpacity style={styles.button}>
-                        <Image style={styles.plus} source={require('../../assets/icons/iconAdd.png')} />
-                    </TouchableOpacity>
-                </Link>
-                <Link style={styles.buttonText} href='./HomeComProjetos' asChild>
-                    <TouchableOpacity style={styles.button}>
-                        <Image style={styles.plus} source={require('../../assets/icons/iconAdd.png')} />
-                    </TouchableOpacity>
-                </Link>
-                <Link style={styles.buttonText} href='./TelaSobreProjetos' asChild>
-                    <TouchableOpacity style={styles.button}>
-                        <Image style={styles.plus} source={require('../../assets/icons/iconAdd.png')} />
-                    </TouchableOpacity>
-                </Link> 
+            <View style={StylesProjetoHome.BotoesTemporarios}>             
+                <ButtonPlus href={"./DadosCliente"} ImgSource = {require('../../assets/icons/iconAdd.png')}/>
             </View>
+            
+                <ButtonPlus href={"./Agenda"} ImgSource = {require('../../assets/icons/iconAdd.png')}/>    
+                <Text style={StylesProjetoHome.infoText}>AGENDA!</Text>
         </View>
     );
 };
+<<<<<<< HEAD
   
 const styles = StyleSheet.create({
     container: {
@@ -112,3 +102,6 @@ const styles = StyleSheet.create({
         justifyContent:"space-evenly"
     },
 });
+=======
+ 
+>>>>>>> 65ade162e94d8f613afd5a3790834779f1eac290

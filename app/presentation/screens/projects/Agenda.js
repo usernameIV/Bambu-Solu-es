@@ -13,17 +13,19 @@ const AgendaScreen = () => {
     '19', '20', '21', '22', '23', '24', '25',
     '26', '27', '28', '29', '30', '31', '1'
   ];
+<<<<<<< HEAD:app/presentation/screens/projects/MarcarAgenda.js
   
+=======
+
+>>>>>>> 65ade162e94d8f613afd5a3790834779f1eac290:app/presentation/screens/projects/Agenda.js
   return (
     <View style={styles.container}>
-      {/* Month and Year */}
+
       <View style={styles.header}>
         <Text style={styles.monthYear}>{month} ({year})</Text>
       </View>
 
-      {/* Weekday initials and Days of the month */}
       <View style={styles.calendarContainer}>
-        {/* Weekday initials */}
         <View style={styles.weekdaysRow}>
           <Text style={styles.weekday}>D</Text>
           <Text style={styles.weekday}>S</Text>
@@ -34,7 +36,6 @@ const AgendaScreen = () => {
           <Text style={styles.weekday}>S</Text>
         </View>
 
-        {/* Days of the month */}
         <View style={styles.daysContainer}>
           {daysOfMonth.map((day, index) => (
             <Text key={index} style={styles.day}>{day}</Text>
@@ -42,7 +43,6 @@ const AgendaScreen = () => {
         </View>
       </View>
 
-      {/* Month and Year selection */}
       <View style={styles.selectionContainer}>
         <TouchableOpacity>
           <Text style={styles.selectionText}>Mês ↓</Text>
@@ -52,7 +52,6 @@ const AgendaScreen = () => {
         </TouchableOpacity>
       </View>
 
-      {/* Buttons for actions and configuration */}
       <View style={styles.buttonsContainer}>
         <TouchableOpacity style={styles.actionButton}>
           <Text style={styles.buttonText}>Registrar{'\n'}ação</Text>
@@ -62,10 +61,8 @@ const AgendaScreen = () => {
         </TouchableOpacity>
       </View>
 
-      {/* Line separator */}
       <View style={styles.separator} />
 
-      {/* Day marked information */}
       <View style={styles.dayInfoContainer}>
         <Text style={styles.dayInfoTitle}>09 de Julho</Text>
         <View style={styles.eventsContainer}>

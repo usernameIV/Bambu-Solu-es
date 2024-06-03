@@ -33,7 +33,7 @@ const ProjectCard = () => {
 const styles = StyleSheet.create({
   card: {
     width: "90%",
-    backgroundColor: "#728056",
+    backgroundColor: CORES.principal,
     borderRadius: 10,
     padding: 15,
     marginVertical: 10,
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#fff",
+    color: CORES.branco,
     marginBottom: 10,
   },
   progressContainer: {
@@ -55,11 +55,11 @@ const styles = StyleSheet.create({
   },
   phaseText: {
     fontSize: 14,
-    color: "#fff",
+    color: CORES.branco,
   },
   progressText: {
     fontSize: 14,
-    color: "#fff",
+    color: CORES.branco,
   },
   progressBar: {
     width: "100%",
@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   },
   dateText: {
     fontSize: 14,
-    color: "#fff",
+    color: CORES.branco,
   },
 });
 

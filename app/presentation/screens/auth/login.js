@@ -3,55 +3,52 @@ import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-nativ
 import { Link } from 'expo-router';
 import CORES from '../../../constants/cores';
 import * as Animatable from 'react-native-animatable';
+import WhiteButton from '../../components/button/ButtonWhite';
+import StylesLogin from './AuthStyles/loginStyle';
 
 
 export default function Login() {
     return (
-        <View style={styles.container}>
+        <View style={StylesLogin.container}>
             <Animatable.Image 
                 animation="fadeInLeft" 
                 delay={500} 
-                style={styles.containerImage} 
+                style={StylesLogin.containerImage} 
                 source={require('../../assets/icons/logo.png')}
                 resizeMode='contain'
             />
-
-            <Animatable.View animation="fadeInUp" style={styles.containerForm}>
+            <Animatable.View animation="fadeInUp" style={StylesLogin.containerForm}>
                 <TextInput 
                     placeholder="E-mail" 
                     placeholderTextColor={CORES.branco}
-                    style={styles.input}
+                    style={StylesLogin.input}
                     keyboardType="email-address"
                     autoCapitalize="none"
                 />
                 <TextInput 
                     placeholder="Senha" 
                     placeholderTextColor={CORES.branco} 
-                    style={styles.input} 
+                    style={StylesLogin.input} 
                     secureTextEntry
-                />
-
-                <Link href={'../projects/projetosHome'} asChild>
-                    <TouchableOpacity style={styles.button} activeOpacity={0.8}> 
-                        <Text style={styles.buttonText}>Login</Text>
-                    </TouchableOpacity> 
-                </Link>
+                />             
+                <WhiteButton href='../projects/projetosHome' text='Login'/>
 
                 <Link href='./EsqueciSenha' asChild>
-                    <TouchableOpacity style={styles.buttonEsqueceu} activeOpacity={0.8}> 
-                        <Text style={styles.esqueceuText}>Esqueceu a{'\n'}senha?</Text>
+                    <TouchableOpacity style={StylesLogin.buttonEsqueceu} activeOpacity={0.8}> 
+                        <Text style={StylesLogin.esqueceuText}>Esqueceu a{'\n'}senha?</Text>
                     </TouchableOpacity>
                 </Link>
 
                 <Link href='./Register' asChild>
-                    <TouchableOpacity style={styles.buttonRegister} activeOpacity={0.8}> 
-                        <Text style={styles.registerText}>Registrar-se{'\n'}no bambu</Text>
+                    <TouchableOpacity style={StylesLogin.buttonRegister} activeOpacity={0.8}> 
+                        <Text style={StylesLogin.registerText}>Registrar-se{'\n'}no bambu</Text>
                     </TouchableOpacity> 
                 </Link>
             </Animatable.View>
         </View>
     );
 };
+<<<<<<< HEAD
  
 const styles = StyleSheet.create({
     container: {
@@ -113,3 +110,6 @@ const styles = StyleSheet.create({
         bottom: '15%',
     },
 });
+=======
+
+>>>>>>> 65ade162e94d8f613afd5a3790834779f1eac290

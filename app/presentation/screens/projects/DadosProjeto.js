@@ -1,76 +1,58 @@
 import React, { useContext } from "react";
-import { View, Text, StyleSheet, TextInput } from "react-native";
+import { View } from "react-native";
 import { Stack } from "expo-router";
 import CORES from "../../../constants/cores";
 import ButtonLink from "../../components/button/ButtonLink";
+import { DataContext } from "./Context/DataContext";
+import StylesClient from "./ProjectsStyles/DadosClienteStyle";
+import InputLink from "../../components/input/InputLink";
+
 
 export default function DadosProjeto() {
-
+  const { projetoData, setProjetoData } = useContext(DataContext);
   return (
-    <View style={styles.container}>
+    <View style={StylesClient.container}>
       <Stack.Screen options={{ title: "Dados do Projeto" }} />
-
-      <Text style={styles.text}>Título do projeto</Text>
-      <TextInput
-        placeholder="Título do projeto"
-        placeholderTextColor={CORES.branco}
-        style={styles.input}
+      <InputLink
+        placeholder="Título do projeto" text={"Nome"} placeholderTextColor={CORES.branco} value={projetoData.titulo}
+        onChangeText={(text) =>
+          setProjetoData({ ...projetoData, titulo: text })
+        }
       />
+<<<<<<< HEAD
  
       <Text style={styles.text}>Endereço</Text>
       <TextInput
         placeholder="Endereço do projeto"
         placeholderTextColor={CORES.branco}
         style={styles.input}
+=======
+      <InputLink
+        placeholder="Endereço do projeto" text={"Endereço"} placeholderTextColor={CORES.branco} value={projetoData.enderecoProjeto}
+        onChangeText={(text) =>
+          setProjetoData({ ...projetoData, enderecoProjeto: text })
+        }
+>>>>>>> 65ade162e94d8f613afd5a3790834779f1eac290
       />
-
-      <Text style={styles.text}>Tipo de construção</Text>
-      <TextInput
-        placeholder="Resid. Comerc. Indust."
-        placeholderTextColor={CORES.branco}
-        style={styles.input}
+      <InputLink
+        placeholder="Resid. Comerc. Indust." text={"Tipo de construção"} placeholderTextColor={CORES.branco} value={projetoData.tipoConstrucao}
+        onChangeText={(text) =>
+          setProjetoData({ ...projetoData, tipoConstrucao: text })
+        }
       />
-
-      <Text style={styles.text}>Tamanho da construção</Text>
-      <TextInput
-        placeholder="Em m²"
-        placeholderTextColor={CORES.branco}
-        style={styles.input}
+      <InputLink placeholder="Em m²" text={"Tamanho da construção"} placeholderTextColor={CORES.branco} value={projetoData.tamanhoConstrucao} 
+      onChangeText={(text) =>
+          setProjetoData({ ...projetoData, tamanhoConstrucao: text })
+        }
       />
-
-      <Text style={styles.text}>Orçamento</Text>
-      <TextInput
-        placeholder="Orçamento inicial"
-        placeholderTextColor={CORES.branco}
-        style={styles.input}
+      <InputLink
+        placeholder="Orçamento inicial" text={"Orçamento"} placeholderTextColor={CORES.branco} value={projetoData.orcamento}
+        onChangeText={(text) =>
+          setProjetoData({ ...projetoData, orcamento: text })
+        }
       />
-
       <ButtonLink href="./DadosAmbiente" text="Salvar e continuar" />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: CORES.branco,
-  },
-  input: {
-    borderRadius: 10,
-    backgroundColor: CORES.principal,
-    color: CORES.branco,
-    height: 40,
-    marginTop: 5,
-    margin: "auto",
-    marginBottom: 12,
-    paddingLeft: 10,
-    fontSize: 16,
-    width: "90%",
-  },
-  text: {
-    fontWeight: "bold",
-    color: CORES.cinza,
-    marginTop: 5,
-    marginLeft: "2%",
-  },
-});

@@ -1,6 +1,10 @@
 import CORES from "../../../../constants/cores";
 import { StyleSheet } from "react-native-web";
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 65ade162e94d8f613afd5a3790834779f1eac290
 const StylesTelaCodigo = StyleSheet.create({
     container: {
         flex: 1,
@@ -42,5 +46,18 @@ const StylesTelaCodigo = StyleSheet.create({
         alignItems: 'center',
         marginTop: '20%',
     },
+<<<<<<< HEAD
 });
+=======
+    input: {
+        borderWidth: 2,
+        borderColor: CORES.branco,
+        fontSize: 14,
+        width: '80%',
+        color: CORES.branco,
+        padding: 8,
+    },
+});
+
+>>>>>>> 65ade162e94d8f613afd5a3790834779f1eac290
 export default StylesTelaCodigo;
