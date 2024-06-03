@@ -1,6 +1,6 @@
 import CORES from "../../../../constants/cores";
 import { StyleSheet } from "react-native-web";
-
+ 
 const StylesMobilia = StyleSheet.create({
     container: {
       padding: 20,

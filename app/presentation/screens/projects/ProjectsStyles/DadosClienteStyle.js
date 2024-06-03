@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 import CORES from '../../../../constants/cores';
-
+ 
 const StylesClient = StyleSheet.create({
     container:{
       flex:1,

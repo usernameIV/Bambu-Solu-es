@@ -1,7 +1,6 @@
 import CORES from "../../../../constants/cores";
 import { StyleSheet } from "react-native-web";
 
-
 const HomeComProjetosStyles = StyleSheet.create({
     container: {
       flex: 1,
