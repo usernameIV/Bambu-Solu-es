@@ -7,13 +7,24 @@
     "plugins": [
       "expo-router",
       [
-      "expo-font",
-      {
-        "fonts": ["./assets/fonts/LexendTera-Regular.ttf"]
-      }
-    ]
+        "expo-font",
+        {
+          
+        }
+      ]
     ],
     "name": "bambu-solucoes-app",
-    "slug": "bambu-solucoes-app"
+    "slug": "bambu-solucoes-app",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "ab7e6c07-c605-4490-bdb2-88a16906cd96"
+      }
+    },
+    "android": {
+      "package": "com.usernamev.bambusolucoesapp"
+    }
   }
 }
