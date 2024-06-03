@@ -16,4 +16,5 @@ const InputLink = ({placeholder, text, ...rest }) => {
         </View>
     );
 }
+
 export default InputLink;

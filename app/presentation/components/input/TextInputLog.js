@@ -3,8 +3,6 @@ import {TextInput} from 'react-native';
 import CORES from '../../../constants/cores' ;
 import StylesRegister from '../../screens/auth/AuthStyles/RegisterStyle';
 
-
-
 const InputLog = ({ placeholder, value, onChangeText, keyboardType, autoCapitalize }) => {
     return (
         <TextInput 
@@ -18,5 +16,6 @@ const InputLog = ({ placeholder, value, onChangeText, keyboardType, autoCapitali
         />      
     );
 };
+
 
 export default InputLog;

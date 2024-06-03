@@ -23,4 +23,5 @@ const InputStyles = StyleSheet.create({
 
 });
 
+
 export default InputStyles;
