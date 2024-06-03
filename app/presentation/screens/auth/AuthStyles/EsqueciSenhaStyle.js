@@ -54,4 +54,5 @@ const StylesEsqueciSenha = StyleSheet.create({
     },
 });
 
+
 export default StylesEsqueciSenha;

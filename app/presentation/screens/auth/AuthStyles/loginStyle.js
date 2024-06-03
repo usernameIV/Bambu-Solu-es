@@ -46,4 +46,6 @@ const StylesLogin = StyleSheet.create({
         bottom: '15%',
     },
 });
+
+
 export default StylesLogin;

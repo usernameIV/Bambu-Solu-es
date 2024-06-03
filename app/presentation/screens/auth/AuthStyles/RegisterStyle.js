@@ -43,4 +43,6 @@ const StylesRegister = StyleSheet.create({
         fontSize: 24,
     },
 });
+
+
 export default StylesRegister;

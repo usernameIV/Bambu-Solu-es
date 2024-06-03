@@ -52,4 +52,5 @@ const StylesTelaCodigo = StyleSheet.create({
     },
 });
 
+
 export default StylesTelaCodigo;
