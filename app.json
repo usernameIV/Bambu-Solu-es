@@ -1,5 +1,6 @@
 {
   "expo": {
+    "version": "1.0.2",
     "scheme": "acme",
     "web": {
       "bundler": "metro"
@@ -24,7 +25,8 @@
       }
     },
     "android": {
-      "package": "com.usernamev.bambusolucoesapp"
+      "package": "com.usernamev.bambusolucoesapp",
+      "versionCode": 2
     }
   }
 }
