@@ -17,4 +17,5 @@ const Button2Styles = StyleSheet.create({
     },
 });
 
+
 export default Button2Styles;
