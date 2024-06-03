@@ -1,28 +1,28 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
-import { Stack } from "expo-router";
-import commonStyles from './ItensStyle/CommonStyles';
+import {View, Text, TouchableOpacity, ScrollView} from 'react-native';
+import {Stack} from "expo-router";
+import commonStyles from './ItemsStyle/CommonStyles';
 import ButtonLink from '../../../components/button/ButtonLink';
 
 const roomItems = [
-  'Itens Antessala - Chão',
-  'Itens Antessala - Parede',
-  'Itens Antessala - Teto',
+  'Itens Quarto - Chão',
+  'Itens Quarto - Parede',
+  'Itens Quarto - Teto',
 ];
 
 const chipItemsChao = [
-  'Tapete', 'Sofá', 'Raque', 'Vasos', 'Mesa de Centro', 'Poltrona', 'Puff', 
-  'Banco', 'Cadeiras', 'Mesa Lateral', 'Aparador', 'Estante',
+  'Cama', 'Tapete', 'Mesa de Cabeceira', 'Cômoda', 'Baú', 'Puff', 
+  'Espelho de Chão', 'Poltrona', 'Banco', 'Sofá-Cama', 'Guarda-Roupa',
 ];
 
 const chipItemsParede = [
-  'Estantes de parede', 'Prateleiras', 'Nichos', 'Suporte para TV', 'Espelhos', 
-  'Cabideiros', 'Quadros', 'Relógios', 'Vasos de planta', 'Painéis decorativos',
+  'Prateleiras', 'Quadros', 'Espelhos', 'Painéis', 'Cabideiros', 
+  'Ganchos', 'Relógios', 'Arandelas', 'Vasos de Planta', 'Decorações de Parede',
 ];
 
 const chipItemsTeto = [
-  'Lustres', 'Plafons', 'Arandelas', 'Ventiladores de teto', 'Cortinas', 
-  'Persianas', 'Painéis acústicos', 'Sistema de som', 'Luminárias pendentes',
+  'Lustres', 'Plafons', 'Arandelas', 'Ventilador de Teto', 'Cortinas', 
+  'Persianas', 'Painéis Acústicos', 'Luminárias Suspensas', 'Sistema de Som',
 ];
 
 const GreenCardScreen = () => {
@@ -54,15 +54,15 @@ const GreenCardScreen = () => {
     let chipType;
     
     switch(item) {
-      case 'Itens Antessala - Chão':
+      case 'Itens Quarto - Chão':
         chipItems = chipItemsChao;
         chipType = 'chao';
         break;
-      case 'Itens Antessala - Parede':
+      case 'Itens Quarto - Parede':
         chipItems = chipItemsParede;
         chipType = 'parede';
         break;
-      case 'Itens Antessala - Teto':
+      case 'Itens Quarto - Teto':
         chipItems = chipItemsTeto;
         chipType = 'teto';
         break;
@@ -112,7 +112,7 @@ const GreenCardScreen = () => {
 
   return (
     <ScrollView contentContainerStyle={commonStyles.container}>
-      <Stack.Screen options={{ title: "Dados da Mobilia - Antessala" }} />
+      <Stack.Screen options={{ title: "Dados da Mobilia - Quarto" }} />
       <View style={commonStyles.card}>
         {roomItems.map((item, index) => renderRoomItem(item, index))}
       </View>

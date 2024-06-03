@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { Stack } from "expo-router";
-import commonStyles from './ItensStyle/CommonStyles';
+import commonStyles from './ItemsStyle/CommonStyles';
 import ButtonLink from '../../../components/button/ButtonLink';
 
 const roomItems = [
